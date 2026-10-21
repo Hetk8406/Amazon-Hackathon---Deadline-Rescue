@@ -1,0 +1,152 @@
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.statusFeasible {
+  background-color: rgba(85, 184, 137, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(85, 184, 137, 0.4);
+}
+
+.statusInfeasible {
+  background-color: rgba(225, 107, 104, 0.15);
+  color: var(--color-danger);
+  border: 1px solid rgba(225, 107, 104, 0.4);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metricCard {
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+}
+
+.metricLabel {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metricValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.metricDeficit {
+  color: var(--color-danger);
+}
+
+.summaryText {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  background-color: var(--color-surface-raised);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1rem;
+}
+
+.issuesSection {
+  margin-top: 0.75rem;
+}
+
+.issuesTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.issuesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.issueItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-raised);
+}
+
+.issueError {
+  border-left: 3px solid var(--color-danger);
+}
+
+.issueWarning {
+  border-left: 3px solid var(--color-warning);
+}
+
+.issueTag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.issueTagError {
+  background-color: rgba(225, 107, 104, 0.2);
+  color: var(--color-danger);
+}
+
+.issueTagWarning {
+  background-color: rgba(232, 162, 58, 0.2);
+  color: var(--color-warning);
+}
+
+.issueMessage {
+  flex: 1;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,196 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.brandTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.01em;
+}
+
+.trackPill {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.actionBtn {
+  background-color: var(--color-surface-raised);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.actionBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.actionBtnPrimary {
+  background-color: var(--color-accent);
+  color: #101214;
+  border: none;
+  font-weight: 600;
+}
+
+.actionBtnPrimary:hover {
+  background-color: var(--color-accent-hover);
+  color: #101214;
+}
+
+.disruptionBtn {
+  background-color: rgba(232, 162, 58, 0.15);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  font-weight: 600;
+}
+
+.disruptionBtn:hover {
+  background-color: var(--color-accent);
+  color: #101214;
+}
+
+.banner {
+  max-width: 1440px;
+  width: calc(100% - 3rem);
+  margin: 1rem auto 0 auto;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.bannerSuccess {
+  background-color: rgba(85, 184, 137, 0.15);
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+}
+
+.bannerInfo {
+  background-color: rgba(138, 180, 248, 0.15);
+  border: 1px solid var(--color-focus);
+  color: var(--color-focus);
+}
+
+.bannerClose {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.mainLayout {
+  max-width: 1440px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 1.75rem;
+  flex: 1;
+}
+
+.leftCol,
+.rightCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightCol {
+  position: sticky;
+  top: 5rem;
+  height: fit-content;
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: 1.25rem 2rem;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+@media (max-width: 960px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+  }
+  .rightCol {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+  .headerActions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .mainLayout {
+    padding: 0 0.75rem;
+    margin: 1rem auto;
+    gap: 1.25rem;
+  }
+  .banner {
+    width: calc(100% - 1.5rem);
+    margin: 0.75rem auto 0 auto;
+    font-size: 0.8125rem;
+  }
+}
